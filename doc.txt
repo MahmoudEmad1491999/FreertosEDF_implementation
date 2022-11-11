@@ -1,0 +1,9 @@
+the itemValue of the xStateListItem  will change for a task tcb at two points in time.
+
+1. when the task get delayed until "it's peroidicity value "
+2. when the task get waken up and moved from the delayed list to the running list to hold the new deadline value which is the currentValue for the itemValue + periodicity.
+
+for example suppose we have asystem with only one task with capacity of 3 and peroidicity of 10
+
+when the task first run the current value itemValue is going to be 10 when it gets delayed.
+then at tick 10 the schedular is going to move the item from the blocked "delayed" list to the running list based on the new itemValue which is the new deadline for the task to be fininshed before 20 "10 + peroidicyt which is 10"  20
